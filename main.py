@@ -45,10 +45,9 @@ before_yesterday_close_price = before_yesterday_data['4. close']
 percent_change = (float(yesterday_close_price) - float(before_yesterday_close_price)) / float(before_yesterday_close_price) * 100
 
 if percent_change < 0 :
-    arrow = "🔺"
+    arrow = "🔻"
 else:
-    arrow ="🔻"
-
+    arrow = "🔺"
 if abs(percent_change) > 4:
     NewsParameters = {
         "q": COMPANY_NAME,
